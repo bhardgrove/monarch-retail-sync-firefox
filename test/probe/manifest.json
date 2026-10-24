@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "dnr-probe",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "http://*.probe.test/*"
+  ],
+  "background": {
+    "scripts": [
+      "bg.js"
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dnr-probe@test"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'"
+  }
+}
